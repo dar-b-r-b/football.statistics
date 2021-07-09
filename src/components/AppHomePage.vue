@@ -1,15 +1,19 @@
 <template>
   <app-layout>
-    <div>
-      <img src="image/football.jpg" alt="фоновое изображение" class="image" />
-    </div>
-    <div class="calendar">
-      <a-calendar
-        v-model:value="value"
-        :fullscreen="false"
-        @select="onSelect"
-      />
-    </div>
+    <a-row>
+      <a-col :span="24"
+        ><div class="search-game">
+          <div class="calendar">
+            <a-calendar
+              v-model:value="value"
+              :fullscreen="false"
+              @select="onSelect"
+            />
+          </div>
+          <a-button type="primary" class="search-button">Найти матч</a-button>
+        </div></a-col
+      >
+    </a-row>
   </app-layout>
 </template>
 
@@ -33,16 +37,22 @@ export default {
 };
 </script>
 
+<style>
+.ant-layout-content {
+  height: 75vh;
+  background: url("/image/football.jpg") !important;
+  background-size: 100% !important;
+}
+</style>
+
 <style scoped>
 .calendar {
   width: 25rem;
-  border-inline: 1px solid #888888;
-  border-radius: 4px;
-  margin-top: 2rem;
-  margin-left: 5rem;
-  z-index: 2;
+  border-color: #ffffff00;
+  border-radius: 3px;
+  margin-top: 3rem;
   top: 9rem;
-  position: absolute;
+  z-index: 10;
 }
 .image {
   width: 100%;
@@ -50,24 +60,13 @@ export default {
 </style>
 
 <style>
-.ant-fullcalendar-header,
-.ant-fullcalendar-calendar-body {
+.search-game {
   background: #ffffff85;
+  width: 26rem;
+  height: 24rem;
+  margin-left: 4rem;
 }
-.ant-fullcalendar-selected-day .ant-fullcalendar-value,
-.ant-fullcalendar-month-panel-selected-cell
-  .ant-fullcalendar-value
-  .ant-fullcalendar-month-panel-current-cell {
-  background: rgb(124, 124, 124);
-  box-shadow: none;
-}
-.ant-fullcalendar-value:active {
-  background: rgb(146, 145, 145);
-}
-.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
-  .ant-select-selector,
-.ant-select.ant-select-sm.ant-fullcalendar-year-select.ant-select-single.ant-select-show-arrow:hover {
-  border: none;
-  box-shadow: none;
+.search-button {
+  margin-top: 0.5rem;
 }
 </style>

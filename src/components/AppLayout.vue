@@ -12,7 +12,25 @@
       <a-layout-content>
         <slot />
       </a-layout-content>
-      <a-layout-footer>Footer</a-layout-footer>
+      <a-layout-footer>
+        <a-row>
+          <a-col :span="12"
+            ><p>
+              © All Right Reserved. Football Statistic Corporation. Пинаем не
+              только мячи c 2001 года
+            </p></a-col
+          >
+          <a-col :span="12" class="source"
+            ><img src="image/instagram.png" alt="Инстаграм" class="icon" /><img
+              src="image/vk.png"
+              alt="ВКонтакте"
+              class="icon" /><img
+              src="image/marker.png"
+              alt="Город"
+              class="icon"
+          /></a-col>
+        </a-row>
+      </a-layout-footer>
     </a-layout>
   </div>
 </template>
@@ -21,6 +39,9 @@
 </script>
 
 <style>
+p {
+  float: left;
+}
 #components-layout {
   text-align: center;
 }
@@ -39,12 +60,22 @@
 }
 a-menu-item {
   margin: 1.5rem;
+  color: rgb(54, 54, 54);
 }
 a-menu {
   line-height: 64px;
 }
 
 .calendar {
-  border: 1px solid #000000;
+  border: 1px solid #303030;
+}
+.icon {
+  width: 2em;
+  height: 2em;
+  margin-left: 2rem;
+}
+.source {
+  float: right;
+  padding-right: 4rem;
 }
 </style>
