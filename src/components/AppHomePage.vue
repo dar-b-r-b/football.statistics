@@ -1,5 +1,5 @@
 <template>
-  <app-layout>
+  <div id="background-image">
     <a-row>
       <a-col :span="24"
         ><div class="search-game">
@@ -14,12 +14,10 @@
         </div></a-col
       >
     </a-row>
-  </app-layout>
+  </div>
 </template>
 
 <script>
-import AppLayout from "@/components/AppLayout";
-
 export default {
   data() {
     return {
@@ -31,35 +29,26 @@ export default {
       console.log(value);
     },
   },
-  components: {
-    AppLayout,
-  },
 };
 </script>
 
-<style>
-.ant-layout-content {
-  height: 75vh;
-  background: url("/image/football.jpg") !important;
-  background-size: 100% !important;
-}
-</style>
 
 <style scoped>
+#background-image {
+  background-image: url("/image/football.jpg");
+  background-size: 100%;
+  height: 75vh;
+  padding-top: 3rem;
+}
 .calendar {
   width: 25rem;
   border-color: #ffffff00;
   border-radius: 3px;
-  margin-top: 3rem;
-  top: 9rem;
-  z-index: 10;
 }
 .image {
   width: 100%;
 }
-</style>
 
-<style>
 .search-game {
   background: #ffffff85;
   width: 26rem;
