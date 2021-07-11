@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import AppHomePage from "@/components/AppHomePage";
 import AppTeamsPage from "@/components/AppTeamsPage";
 import AppLeaguesPage from "@/components/AppLeaguesPage";
+import AppCalendarPage from "@/components/AppCalendarPage";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: "/leagues",
     name: "Leagues",
     component: AppLeaguesPage,
+  },
+  {
+    path: "/calendar",
+    name: "Calendar",
+    component: AppCalendarPage,
   },
 ];
 

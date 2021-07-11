@@ -12,6 +12,7 @@ import {
   Tooltip,
   Spin,
   Table,
+  Dropdown,
 } from "ant-design-vue";
 import App from "./App.vue";
 import "./assets/style.css";
@@ -32,6 +33,7 @@ app.use(Card);
 app.use(Tooltip);
 app.use(Spin);
 app.use(Table);
+app.use(Dropdown);
 
 app.use(router);
 app.mount("#app");

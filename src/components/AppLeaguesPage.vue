@@ -98,10 +98,6 @@ export default {
 </script>
 
 <style scoped>
-.input-league,
-.input-year {
-  margin: 1rem 0 0 3rem;
-}
 .search-input {
   text-align: left;
 }

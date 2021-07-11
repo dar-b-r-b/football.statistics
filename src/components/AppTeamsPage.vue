@@ -69,12 +69,6 @@ export default {
 </script>
 
 <style scoped>
-.input-team {
-  margin: 1rem 0 0 3rem;
-}
-.search-input {
-  text-align: left;
-}
 .list-teams {
   overflow-y: auto;
   margin-top: 2em;
@@ -99,5 +93,13 @@ export default {
 }
 .ant-card-body {
   padding: 0;
+}
+.input-league,
+.input-team,
+.input-year {
+  margin: 1rem 0 0 3rem;
+}
+.search-input {
+  text-align: left;
 }
 </style>
